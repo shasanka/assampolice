@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.navbar > div {
+  padding: 0 30px;
+  font-size: 20px;
+}
+
+.navbar .menu {
+  margin-right: auto;
+}
+
+/* .menu {
+  display: flex;
+}
+
+/* .menu > div {
+  width: 100%;
+  justify-content: space-between;
+} */
+
+.navbar .text {
+  /* padding: 10px; */
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.text:hover {
+  color: #fff;
+  background-color: black;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
