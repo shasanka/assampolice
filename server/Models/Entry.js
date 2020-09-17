@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 let EntrySchema = new mongoose.Schema({
+    uuid: String,
     name: String,
     phone_no: String,
     email: String,
@@ -9,7 +10,7 @@ let EntrySchema = new mongoose.Schema({
     address: String,
     school: String,
     class: String,
-    type: String,
+    competition_type: String,
     date: {
         type: Date,
         default: Date.now
