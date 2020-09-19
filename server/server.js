@@ -16,10 +16,11 @@ const fs = require('fs');
 const { DateTime } = require('luxon');
 const mime = require('mime-types')
 
-// const emailer = require('./EmailModule');
-// emailer.initialise();
+var https = require('https');
 
 const API_PORT = process.env.PORT || 8544;
+const HTTPS_PORT = 443;
+
 const app = express();
 const router = express.Router();
 
@@ -70,7 +71,6 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../build')));
-
 
 router.post('/add_entry', (req, res) => {
     if (req.body) {

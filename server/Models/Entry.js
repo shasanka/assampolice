@@ -6,11 +6,14 @@ let EntrySchema = new mongoose.Schema({
     phone_no: String,
     email: String,
     gender: String,
-    age: Number,
+    // age: Number,
     address: String,
     school: String,
     class: String,
+    division: String,
     competition_type: String,
+    essay_language: String,
+    declaration:Boolean,
     date: {
         type: Date,
         default: Date.now

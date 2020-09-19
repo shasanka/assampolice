@@ -9,9 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0;
+  padding: 10;
   box-sizing: border-box;
-  /* background: #d8dbe2; */
+  background: #F8F9FC;
 }
 
 code {

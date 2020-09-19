@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import "../components/Header.css";
-import logo from "../assets/images/logo.jpeg";
+import logo from "../assets/images/assam_police_logo.png"
 import {
   AppBar,
   Toolbar,
-  IconButton,
   Typography,
-  Button,
-  withStyles,
+  withStyles
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
 
 const styles = (theme) => ({
   root: {
@@ -21,12 +18,16 @@ const styles = (theme) => ({
   title: {
     flexGrow: 1,
     paddingLeft: "10px",
+    fontSize: 28,
+    fontWeight: 'bold'
   },
   logo: {
     width: "60px",
     height: "60px",
-    objectFit: "contain",
-    paddingLeft: "30px",
+    padding: 5,
+    paddingLeft: 20
+    // objectFit: "contain",
+    // paddingLeft: "30px",
   },
   rulesText: {
     paddingRight: "20px",
@@ -37,23 +38,25 @@ const styles = (theme) => ({
 });
 
 class Header extends Component {
-  goToRules = () => {
-    this.props.goToRulesSection();
-    console.log("here");
-  };
 
   render() {
     const { classes } = this.props;
 
     return (
       <React.Fragment>
-        <AppBar position="static" color="transparent">
-          <Toolbar>
+        <AppBar position="static" color="primary">
+          <Toolbar >
             <img src={logo} className={classes.logo} alt="Assam police" />
-            <Typography variant="h6" className={classes.title}>
-              Assam Police
+            <Typography className={classes.title}>
+              Assam Police Day 2020
             </Typography>
-            <div className={classes.rulesText}>
+            {/* <Button style={{ color: 'white' }} onClick={() => updateLang('en')}>
+              English
+            </Button> */}
+            {/* <Button style={{ color: 'white' }} onClick={() => updateLang('as')} >
+              Assamese
+            </Button> */}
+            {/* <div className={classes.rulesText}>
               <Button
                 color="inherit"
                 variant="outlined"
@@ -65,10 +68,10 @@ class Header extends Component {
 
             <Button color="primary" variant="contained">
               Apply
-            </Button>
+            </Button> */}
           </Toolbar>
         </AppBar>
-      </React.Fragment>
+      </React.Fragment >
     );
   }
 }

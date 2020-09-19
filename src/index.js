@@ -9,18 +9,19 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 const theme = createMuiTheme({
   palette: {
     type: "light",
+    primary: {
+      main: '#3A6EA5'
+    },
     secondary: {
-      main: "#2443AC",
+      main: "#455a64",
     },
   },
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
